@@ -1,0 +1,9 @@
+
+ npm create vite@latest
+npm install gh-pages --save-dev
+
+"predeploy" : "npm run build",
+"deploy" : "gh-pages -d dist",
+
+"homepage": "https://{username}.github.io/{repo-name}/"
+
