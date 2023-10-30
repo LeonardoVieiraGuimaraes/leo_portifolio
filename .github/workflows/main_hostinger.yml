@@ -1,0 +1,28 @@
+on: 
+    push:
+        branches:
+            - main
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    # - name: Install dependencies
+    #   run: npm install
+    # - name: Build TypeScript
+    #   run: npm run build
+
+    - name: 📂 Sync files
+      uses: pressidium/lftp-mirror-action@v1
+      with:
+        host: ${{ secrets.ftps_host }}
+        user: ${{ secrets.ftps_user }}
+        pass: ${{ secrets.ftps_password }}
+        localDir: './dist'
+        remoteDir: 'leo_portfolio/'
+        # server-dir: portifolio-react/
+        port: 22 # todo replace with your web hosts ftps port
+        # timeout: 120000 
