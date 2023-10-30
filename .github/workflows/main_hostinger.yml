@@ -21,8 +21,8 @@ jobs:
         host: ${{ secrets.ftps_host }}
         user: ${{ secrets.ftps_user }}
         pass: ${{ secrets.ftps_password }}
-        localDir: './dist'
-        remoteDir: '/root/leo_portfolio'
+        localDir: 'dist'
+        remoteDir: 'root/leo_portfolio'
         # server-dir: portifolio-react/
         port: 22 # todo replace with your web hosts ftps port
         # timeout: 120000 
