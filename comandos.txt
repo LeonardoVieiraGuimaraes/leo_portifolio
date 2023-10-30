@@ -7,3 +7,5 @@ npm install gh-pages --save-dev
 
 "homepage": "https://{username}.github.io/{repo-name}/"
 
+npm run deploy
+
