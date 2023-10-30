@@ -1,0 +1,12 @@
+FROM nginx:latest
+
+COPY ./mysite/. /usr/share/nginx/html/
+#RUN rm /etc/nginx/conf.d/default.conf
+
+#COPY ./mysite_nginx.conf /etc/nginx/conf.d/
+
+#COPY ./hospital_nginx.conf /etc/nginx/conf.d/
+
+#COPY ./hospital_nginx.conf /etc/nginx/sites-available/
+
+#RUN sudo ln -s /etc/nginx/sites-available/mysite_nginx.conf /etc/nginx/sites-enabled/
