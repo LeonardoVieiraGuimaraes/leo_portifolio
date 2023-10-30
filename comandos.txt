@@ -9,3 +9,21 @@ npm install gh-pages --save-dev
 
 npm run deploy
 
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init -p
+
+content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+  index
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+npm install react-icons
+
