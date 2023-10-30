@@ -28,6 +28,3 @@ jobs:
         port: 22 # todo replace with your web hosts ftps port
         # timeout: 120000 
         reverse: true
-
-    - name: Build and start Docker Compose
-      run: docker-compose up -d
