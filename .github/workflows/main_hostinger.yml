@@ -24,21 +24,11 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: './dist'
+          localDir: '.'
           remoteDir: 'leo_portifolio'
           # ignoreFile: '.lftp_ignore'
           # reverse: true
-      - name: 📂 Sync files
-        uses: pressidium/lftp-mirror-action@v1
-        with:
-          host: ${{ secrets.sftp_host }}
-          user: ${{ secrets.sftp_user }}
-          pass: ${{ secrets.sftp_password }}
-          port: ${{ secrets.sftp_port }}
-          localDir: './docker'
-          remoteDir: 'leo_portifolio'
-            # ignoreFile: '.lftp_ignore'
-            # reverse: true
+  
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
         with: 
