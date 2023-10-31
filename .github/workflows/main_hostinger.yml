@@ -18,7 +18,7 @@ jobs:
 
       - name: Upload via SFTP
         run: |
-          echo "@Miguel20140427" scp -r /dist/*  root@191.101.78.233:/leo_portifolio
+          echo "@Miguel20140427" scp -r /dist/  root@191.101.78.233:/leo_portifolio
         # Substitua '/path/to/your/folder' com o caminho para a sua pasta local
         # Substitua 'user' com seu nome de usuário SFTP
         # Substitua 'your_sftp_host' com o host do seu servidor SFTP
