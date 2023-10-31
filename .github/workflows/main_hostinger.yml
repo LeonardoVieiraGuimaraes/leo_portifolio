@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
+
       - name: Install dependencies
         run: npm install
 
@@ -22,7 +23,7 @@ jobs:
           host: ${{ secrets.sftp_host }}
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
-          localDir: './dist, ./docker-compose.yml, ./Dockerfile'
+          localDir: './dist, docker-compose.yml, Dockerfile'
           remoteDir: 'leo_portfolio'
           # server-dir: portifolio-react/
           port: 22 # todo replace with your web hosts ftps port
