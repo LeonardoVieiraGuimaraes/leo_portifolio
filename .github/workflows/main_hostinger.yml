@@ -1,25 +1,69 @@
-name: Upload via SFTP
-
-on:
+on: 
   push:
-    branches:
-      - main # substitua com o nome da sua branch principal
-
+      branches:
+          - main
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+web-deploy:
+  name: 🎉 Deploy
+  runs-on: ubuntu-latest
+  steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    # - name: Install dependencies
+    #   run: npm install
 
-      - name: Install SSH client
-        run: sudo apt-get update && sudo apt-get install openssh-client -y
+    # - name: Build TypeScript
+    #   run: npm run build
 
-      - name: Upload via SFTP
-        run: |
-          echo "@Miguel20140427" scp -r /dist/  root@191.101.78.233:/leo_portifolio
-        # Substitua '/path/to/your/folder' com o caminho para a sua pasta local
-        # Substitua 'user' com seu nome de usuário SFTP
-        # Substitua 'your_sftp_host' com o host do seu servidor SFTP
-        # Substitua '/remote/path' com o caminho remoto onde você deseja enviar a pasta
+    - name: 📂 Sync files
+      uses: pressidium/lftp-mirror-action@v1
+      with:
+        host: ${{ secrets.sftp_host }}
+        user: ${{ secrets.sftp_user }}
+        pass: ${{ secrets.sftp_password }}
+        port: ${{ secrets.sftp_port }}
+        localDir: './dir'
+        remoteDir: 'leo_portfolio'
+        # ignoreFile: '.lftp_ignore'
+        # reverse: true
+    - name: 📂 Sync files
+      uses: pressidium/lftp-mirror-action@v1
+      with:
+        host: ${{ secrets.sftp_host }}
+        user: ${{ secrets.sftp_user }}
+        pass: ${{ secrets.sftp_password }}
+        port: ${{ secrets.sftp_port }}
+        localDir: 'docker-compose.yml'
+        remoteDir: 'leo_portfolio'
+          # ignoreFile: '.lftp_ignore'
+          # reverse: true
+    
+    - name: 📂 Sync files
+      uses: pressidium/lftp-mirror-action@v1
+      with:
+        host: ${{ secrets.sftp_host }}
+        user: ${{ secrets.sftp_user }}
+        pass: ${{ secrets.sftp_password }}
+        port: ${{ secrets.sftp_port }}
+        localDir: 'Dockerfile'
+        remoteDir: 'leo_portfolio'
+              # ignoreFile: '.lftp_ignore'
+              # reverse: true
+        
+
+      
+
+    # - name: executing remote ssh commands using password
+    #   uses: appleboy/ssh-action@v1.0.0
+    #   with: 
+    #     host: ${{ secrets.sftp_host }}
+    #     username: ${{ secrets.sftp_user }}
+    #     password: ${{ secrets.sftp_password }}
+    #     port: ${{ secrets.sftp_port }}
+    #     script: |
+    #       cd leo_portfolio
+    #       npm install
+    #       npm run build
+    #       docker-compose up -d
