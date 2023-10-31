@@ -26,4 +26,4 @@ jobs:
           port: ${{ secrets.sftp_port }}
           localDir: './dist ./docker-compose.yml ./Dockerfile'
           remoteDir: 'leo_portfolio' 
-          reverse: true
+          # reverse: true
