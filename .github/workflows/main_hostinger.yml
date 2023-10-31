@@ -27,7 +27,7 @@ jobs:
           localDir: '.'
           remoteDir: 'leo_portfolio'
           # ignoreFile: '.lftp_ignore'
-          reverse: true
+          # reverse: true
         
   
       - name: executing remote ssh commands using password
