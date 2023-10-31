@@ -24,6 +24,24 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: './dist ./docker-compose.yml ./Dockerfile'
-          remoteDir: 'leo_portfolio' 
+          localDir: '.'
+          remoteDir: 'leo_portfolio'
+          # ignoreFile: '.lftp_ignore'
           reverse: true
+        
+  build:
+    name: 🎉 Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.0
+        with: 
+          host: ${{ secrets.sftp_host }}
+          username: ${{ secrets.sftp_user }}
+          password: ${{ secrets.sftp_password }}
+          port: ${{ secrets.sftp_port }}
+          script: |
+            cd leo_portfolio
+            npm install
+            npm run build
+            docker-compose up -d
