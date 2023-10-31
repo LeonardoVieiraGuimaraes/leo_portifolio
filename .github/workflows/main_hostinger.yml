@@ -4,53 +4,53 @@ on:
           - main
 name: 🚀 Deploy website on push
 jobs:
-web-deploy:
-  name: 🎉 Deploy
-  runs-on: ubuntu-latest
-  steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
 
-    # - name: Install dependencies
-    #   run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-    # - name: Build TypeScript
-    #   run: npm run build
+      # - name: Build TypeScript
+      #   run: npm run build
 
-    - name: 📂 Sync files
-      uses: pressidium/lftp-mirror-action@v1
-      with:
-        host: ${{ secrets.sftp_host }}
-        user: ${{ secrets.sftp_user }}
-        pass: ${{ secrets.sftp_password }}
-        port: ${{ secrets.sftp_port }}
-        localDir: './dir'
-        remoteDir: 'leo_portfolio'
-        # ignoreFile: '.lftp_ignore'
-        # reverse: true
-    - name: 📂 Sync files
-      uses: pressidium/lftp-mirror-action@v1
-      with:
-        host: ${{ secrets.sftp_host }}
-        user: ${{ secrets.sftp_user }}
-        pass: ${{ secrets.sftp_password }}
-        port: ${{ secrets.sftp_port }}
-        localDir: 'docker-compose.yml'
-        remoteDir: 'leo_portfolio'
+      - name: 📂 Sync files
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.sftp_host }}
+          user: ${{ secrets.sftp_user }}
+          pass: ${{ secrets.sftp_password }}
+          port: ${{ secrets.sftp_port }}
+          localDir: './dir'
+          remoteDir: 'leo_portfolio'
           # ignoreFile: '.lftp_ignore'
           # reverse: true
-    
-    - name: 📂 Sync files
-      uses: pressidium/lftp-mirror-action@v1
-      with:
-        host: ${{ secrets.sftp_host }}
-        user: ${{ secrets.sftp_user }}
-        pass: ${{ secrets.sftp_password }}
-        port: ${{ secrets.sftp_port }}
-        localDir: 'Dockerfile'
-        remoteDir: 'leo_portfolio'
-              # ignoreFile: '.lftp_ignore'
-              # reverse: true
+      - name: 📂 Sync files
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.sftp_host }}
+          user: ${{ secrets.sftp_user }}
+          pass: ${{ secrets.sftp_password }}
+          port: ${{ secrets.sftp_port }}
+          localDir: 'docker-compose.yml'
+          remoteDir: 'leo_portfolio'
+            # ignoreFile: '.lftp_ignore'
+            # reverse: true
+      
+      - name: 📂 Sync files
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.sftp_host }}
+          user: ${{ secrets.sftp_user }}
+          pass: ${{ secrets.sftp_password }}
+          port: ${{ secrets.sftp_port }}
+          localDir: 'Dockerfile'
+          remoteDir: 'leo_portfolio'
+                # ignoreFile: '.lftp_ignore'
+                # reverse: true
         
 
       
