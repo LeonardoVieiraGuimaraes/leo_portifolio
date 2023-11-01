@@ -1,6 +1,6 @@
 #version: "3.9"
 networks:
-  nginx_network:
+  nginx-network:
     # driver: bridge
     external: true
 
@@ -23,6 +23,6 @@ services:
       - ./dist:/usr/share/nginx/html
 
     networks:
-      - nginx_network
+      - nginx-network
       # - nginx-network
 
