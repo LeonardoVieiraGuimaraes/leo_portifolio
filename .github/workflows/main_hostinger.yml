@@ -30,7 +30,7 @@ jobs:
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
           localDir: './dist'
-          remoteDir: 'leo-portifolio'
+          remoteDir: 'leo-portifolio/dist'
         
       
          
