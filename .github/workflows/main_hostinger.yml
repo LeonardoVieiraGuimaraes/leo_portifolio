@@ -19,9 +19,10 @@ jobs:
 
       - name: Prepare files
         run: |
-          cp docker-compose.yml dist/
-          cp Dockerfile dist/
-
+          cp docker-compose.yml leo-portifolio/
+          cp Dockerfile leo-portifolio/
+          cp -r dist leo-portifolio/dist
+     
       - name: 📂 Sync files
         uses: pressidium/lftp-mirror-action@v1
         with:
@@ -29,8 +30,8 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: './dist'
-          remoteDir: 'leo-portifolio/dist'
+          localDir: './leo-portifolio'
+          remoteDir: 'leo-portifolio'
         
       
          
