@@ -17,6 +17,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prepare files
+        run: |
+          cp docker-compose.yml dist/
+          cp Dockerfile dist/
+
       - name: 📂 Sync files
         uses: pressidium/lftp-mirror-action@v1
         with:
@@ -27,15 +32,7 @@ jobs:
           localDir: './dist'
           remoteDir: 'leo_portifolio'
         
-      - name: ⬆️ Upload Docker files
-        uses: appleboy/scp-action@v0.1.1
-        with:
-          host: ${{ secrets.sftp_host }}
-          username: ${{ secrets.sftp_user }}
-          key: ${{ secrets.ssh_private_key }}
-          port: ${{ secrets.sftp_port }}
-          source: "docker-compose.yml,Dockerfile"
-          target: 'leo-portfolio' # Remote directory
+      
          
           # ignoreFile: '.lftp_ignore'
           # reverse: true
