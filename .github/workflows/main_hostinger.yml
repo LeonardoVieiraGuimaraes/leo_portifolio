@@ -10,8 +10,14 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
+      
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
 
-      - name: Install node
+      - name: Build node
         run: npm install
 
       - name: Build
