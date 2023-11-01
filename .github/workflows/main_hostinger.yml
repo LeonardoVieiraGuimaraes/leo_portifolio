@@ -46,4 +46,4 @@ jobs:
           port: ${{ secrets.sftp_port }}
           script: |
             cd leo-portfolio
-            docker-compose up -d
+            docker compose up -d
