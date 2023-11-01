@@ -5,9 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile
     expose:
-      - 91
-#    ports:
-#      - 801:801
+      - 80
+    ports:
+      8080:80
 
 #    volumes:
 #      - /root/mysite/mysite:/usr/share/nginx/html
