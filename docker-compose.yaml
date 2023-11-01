@@ -1,20 +1,28 @@
 #version: "3.9"
+networks:
+  nginx_nginx_net:
+    # driver: bridge
+    external: true
+
+# networks:
+#   nginx-network:
+#     external: true
+#     # driver: bridge
+
 services:
   portifolio:
     build:
       context: .
       dockerfile: Dockerfile
-    expose:
-      - 91
-#    ports:
-#      - 801:801
+    # expose:
+    #   - 8001
+    ports:
+     - 8001:8001
 
-#    volumes:
-#      - /root/mysite/mysite:/usr/share/nginx/html
+    volumes:
+      - ./dist:/usr/share/nginx/html
 
     networks:
-      - nginx-network
+      - nginx_nginx_net
+      # - nginx-network
 
-networks:
-  nginx-network:
-    external: true

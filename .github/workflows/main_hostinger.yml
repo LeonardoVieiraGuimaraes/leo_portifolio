@@ -11,10 +11,10 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Install node
         run: npm install
 
-      - name: Build TypeScript
+      - name: Build
         run: npm run build
 
       - name: 📂 Sync files
@@ -24,8 +24,19 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: '.'
+          localDir: './dist'
           remoteDir: 'leo_portifolio'
+        
+      - name: ⬆️ Upload Docker files
+        uses: appleboy/scp-action@v0.1.1
+        with:
+          host: ${{ secrets.sftp_host }}
+          username: ${{ secrets.sftp_user }}
+          key: ${{ secrets.ssh_private_key }}
+          port: ${{ secrets.sftp_port }}
+          source: "docker-compose.yml,Dockerfile"
+          target: 'leo-portfolio' # Remote directory
+         
           # ignoreFile: '.lftp_ignore'
           # reverse: true
   
@@ -37,5 +48,5 @@ jobs:
           password: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
           script: |
-            cd leo_portfolio
+            cd leo-portfolio
             docker-compose up -d
