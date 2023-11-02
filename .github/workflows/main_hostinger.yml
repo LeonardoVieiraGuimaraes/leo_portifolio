@@ -10,8 +10,14 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
+      
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
 
-      - name: Install node
+      - name: Build node
         run: npm install
 
       - name: Build
@@ -19,9 +25,11 @@ jobs:
 
       - name: Prepare files
         run: |
-          cp docker-compose.yml dist/
-          cp Dockerfile dist/
-
+          mkdir leo-portifolio
+          cp docker-compose.yml leo-portifolio/
+          cp Dockerfile leo-portifolio/
+          cp -r dist leo-portifolio/dist
+     
       - name: 📂 Sync files
         uses: pressidium/lftp-mirror-action@v1
         with:
@@ -29,8 +37,8 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: './dist'
-          remoteDir: 'leo_portifolio'
+          localDir: './leo-portifolio'
+          remoteDir: 'leo-portifolio'
         
       
          
@@ -45,5 +53,5 @@ jobs:
           password: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
           script: |
-            cd leo-portfolio
+            cd leo-portifolio
             docker compose up -d
