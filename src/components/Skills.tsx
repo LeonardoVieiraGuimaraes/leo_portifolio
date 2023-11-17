@@ -1,14 +1,23 @@
-import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2"
+import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2";
 
 export default function Skills() {
   const educations = [
     {
+      name: "Mestre me Modelagem Computacional e Sistemas | UNIMONTES",
+    },
+    {
       name: "Graduação Bacharelado em Ciência da Computação | FACIT",
+    },
+    {
+      name: "Especialização em Matemática | Finon",
+    },
+    {
+      name: "Especialização em Matemática e Estatística | UFLA",
     },
     {
       name: "Graduação Licenciatura em Matemática | UNIMONTES",
     },
-  ]
+  ];
 
   const skills = [
     {
@@ -31,10 +40,30 @@ export default function Skills() {
       icon: "images/nodejs.svg",
       level: 65,
     },
-  ]
+    {
+      name: "Django",
+      icon: "images/django.svg",
+      level: 65,
+    },
+    {
+      name: "Python",
+      icon: "images/python.svg",
+      level: 65,
+    },
+    {
+      name: "Docker",
+      icon: "images/docker.svg",
+      level: 65,
+    },
+    {
+      name: "Nginx",
+      icon: "images/nginx.svg",
+      level: 65,
+    },
+  ];
 
   return (
-    <section className="rounded-br-[80px] bg-gray-300 md:rounded-br-[180px]" id="skills">
+    <section className="bg-gray-300" id="skills">
       <div className="container mx-auto max-w-4xl p-4 py-12">
         <div className="relative mb-4 p-4 text-center">
           <h2 className="relative z-40 mb-2 font-bold">
@@ -74,7 +103,7 @@ export default function Skills() {
               Skills
             </h3>
 
-            <div className="grid grid-cols-1 gap-4 font-semibold md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 font-semibold md:grid-cols-3">
               {skills.map((skill, index) => (
                 <div
                   key={`skill-${index}`}
@@ -103,5 +132,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
