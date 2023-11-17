@@ -37,8 +37,7 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: "."
-          # localDir: "./leo-portifolio"
+          localDir: "./leo-portifolio"
           remoteDir: "leo-portifolio"
 
           # ignoreFile: '.lftp_ignore'
