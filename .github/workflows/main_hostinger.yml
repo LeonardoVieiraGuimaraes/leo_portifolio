@@ -37,7 +37,8 @@ jobs:
           user: ${{ secrets.sftp_user }}
           pass: ${{ secrets.sftp_password }}
           port: ${{ secrets.sftp_port }}
-          localDir: "./leo-portifolio"
+          localDir: "."
+          # localDir: "./leo-portifolio"
           remoteDir: "leo-portifolio"
 
           # ignoreFile: '.lftp_ignore'
@@ -53,3 +54,7 @@ jobs:
           script: |
             cd leo-portifolio
             docker compose up -d
+
+          # script: |
+          #   cd leo-portifolio
+          #   docker compose up -d
