@@ -20,9 +20,8 @@ services:
     #  - 8001:8001
 
     volumes:
-      - ./dist:/usr/share/nginx/html
+      - ./dist:/usr/share/nginx/html/leo-portifolio
 
     networks:
       - nginx-network
       # - nginx-network
-
