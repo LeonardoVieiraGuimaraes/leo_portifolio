@@ -122,7 +122,9 @@ export default function Skills() {
                       <div
                         className="h-2.5 rounded-full bg-blue-600"
                         style={{ width: `${skill.level}%` }}
-                      ></div>
+                      >
+                        {""}
+                      </div>
                     </div>
                   </div>
                 </div>
