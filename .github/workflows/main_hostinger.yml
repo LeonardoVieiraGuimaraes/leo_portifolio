@@ -1,57 +1,55 @@
-# on: 
-#   push:
-#       branches:
-#           - main
-# name: 🚀 Deploy website on push
-# jobs:
-#   web-deploy:
-#     name: 🎉 Deploy
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: 🚚 Get latest code
-#         uses: actions/checkout@v3
-      
-#       - name: Set up Node
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 20
-#           cache: 'npm'
+on:
+  push:
+    branches:
+      - main
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
 
-#       - name: Build node
-#         run: npm install
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "npm"
 
-#       - name: Build
-#         run: npm run build
+      - name: Build node
+        run: npm install
 
-#       - name: Prepare files
-#         run: |
-#           mkdir leo-portifolio
-#           cp docker-compose.yml leo-portifolio/
-#           cp Dockerfile leo-portifolio/
-#           cp -r dist leo-portifolio/dist
-     
-#       - name: 📂 Sync files
-#         uses: pressidium/lftp-mirror-action@v1
-#         with:
-#           host: ${{ secrets.sftp_host }}
-#           user: ${{ secrets.sftp_user }}
-#           pass: ${{ secrets.sftp_password }}
-#           port: ${{ secrets.sftp_port }}
-#           localDir: './leo-portifolio'
-#           remoteDir: 'leo-portifolio'
-        
-      
-         
-#           # ignoreFile: '.lftp_ignore'
-#           # reverse: true
-  
-#       - name: executing remote ssh commands using password
-#         uses: appleboy/ssh-action@v1.0.0
-#         with: 
-#           host: ${{ secrets.sftp_host }}
-#           username: ${{ secrets.sftp_user }}
-#           password: ${{ secrets.sftp_password }}
-#           port: ${{ secrets.sftp_port }}
-#           script: |
-#             cd leo-portifolio
-#             docker compose up -d
+      - name: Build
+        run: npm run build
+
+      - name: Prepare files
+        run: |
+          mkdir leo-portifolio
+          cp docker-compose.yml leo-portifolio/
+          cp Dockerfile leo-portifolio/
+          cp -r dist leo-portifolio/dist
+
+      - name: 📂 Sync files
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.sftp_host }}
+          user: ${{ secrets.sftp_user }}
+          pass: ${{ secrets.sftp_password }}
+          port: ${{ secrets.sftp_port }}
+          localDir: "./leo-portifolio"
+          remoteDir: "leo-portifolio"
+
+          # ignoreFile: '.lftp_ignore'
+          # reverse: true
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.sftp_host }}
+          username: ${{ secrets.sftp_user }}
+          password: ${{ secrets.sftp_password }}
+          port: ${{ secrets.sftp_port }}
+          script: |
+            cd leo-portifolio
+            docker compose up -d
