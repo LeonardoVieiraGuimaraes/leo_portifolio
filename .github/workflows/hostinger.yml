@@ -1,10 +1,10 @@
 name: Hostinger Workflow
 
 on:
-  # push:
-  #   branches:
-  #     - main
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  # workflow_dispatch:
 jobs:
   web-deploy:
     name: 🎉 Deploy
