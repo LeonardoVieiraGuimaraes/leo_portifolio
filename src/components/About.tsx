@@ -1,5 +1,5 @@
 import { differenceInYears } from "date-fns";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function About() {
   const birthDate = new Date(1984, 10 - 1, 2); // Substitua pela sua data de nascimento (ano, mês - 1, dia)

@@ -46,7 +46,10 @@ export default function Projects() {
 
   return (
     <>
-      <section className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white" id="projects">
+      <section
+        className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
+        id="projects"
+      >
         <div className="container mx-auto max-w-4xl p-4 py-12">
           <div className="relative p-4 text-center">
             <h2 className="relative z-40 mb-2 text-white">
