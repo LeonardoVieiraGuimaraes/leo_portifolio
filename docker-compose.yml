@@ -21,7 +21,7 @@ services:
     #  - 8001:8001
 
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      # - ./default.conf:/etc/nginx/conf.d/default.conf
       - ./dist:/usr/share/nginx/html/leo-portifolio
       # - ./nginx.conf:/etc/nginx/conf.d/default.conf
 
