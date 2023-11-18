@@ -9,7 +9,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        profile: "url('/images/fotoPerfil.jpg')",
+        profile: "url('images/fotoPerfil.jpg')",
       },
     },
   },
