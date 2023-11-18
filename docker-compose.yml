@@ -11,9 +11,10 @@ networks:
 
 services:
   portifolio:
-    build:
-      context: .
-      dockerfile: nginx:latest
+    image: nginx:latest
+    # build:
+    #   context: .
+    #   dockerfile: nginx:latest
     # expose:
     #   - 8001
     # ports:
