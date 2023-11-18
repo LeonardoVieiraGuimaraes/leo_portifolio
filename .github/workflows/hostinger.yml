@@ -1,8 +1,9 @@
+# .github/workflows/hostinger.yml
+name: Hostinger Workflow
+
 on:
-  push:
-    branches:
-      - main
-name: 🚀 Deploy website on push
+  repository_dispatch:
+    types: [start-hostinger]
 jobs:
   web-deploy:
     name: 🎉 Deploy

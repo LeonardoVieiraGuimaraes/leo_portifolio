@@ -5,5 +5,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   // base: "",
-  base: "/leo-portifolio/",
+  base: "/", // para o servidor leoproti.com.br
+  // base: "/leo-portifolio/", para git page
 });
