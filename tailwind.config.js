@@ -9,7 +9,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        profile: "url('leo-portifolio/images/fotoPerfil.jpg')",
+        profile: "url('images/fotoPerfil.jpg')",
       },
     },
   },

@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir leo-portifolio
           cp docker-compose.yml leo-portifolio/
-          cp Dockerfile leo-portifolio/
+          cp nginx.conf leo-portifolio/
           cp -r dist leo-portifolio/dist
 
       - name: 📂 Sync files
