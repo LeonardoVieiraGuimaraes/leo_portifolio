@@ -22,42 +22,42 @@ export default function Skills() {
   const skills = [
     {
       name: "HTML5/CSS3",
-      icon: "images/html.svg",
+      icon: "leo-portifolio/images/html.svg",
       level: 95,
     },
     {
       name: "JavaScript",
-      icon: "images/javascript.svg",
+      icon: "leo-portifolio/images/javascript.svg",
       level: 90,
     },
     {
       name: "React.js",
-      icon: "images/react.svg",
+      icon: "leo-portifolio/images/react.svg",
       level: 85,
     },
     {
       name: "Node.js",
-      icon: "images/nodejs.svg",
+      icon: "leo-portifolio/images/nodejs.svg",
       level: 65,
     },
     {
       name: "Django",
-      icon: "images/django.svg",
+      icon: "leo-portifolio/images/django.svg",
       level: 65,
     },
     {
       name: "Python",
-      icon: "images/python.svg",
+      icon: "leo-portifolio/images/python.svg",
       level: 65,
     },
     {
       name: "Docker",
-      icon: "images/docker.svg",
+      icon: "leo-portifolio/images/docker.svg",
       level: 65,
     },
     {
       name: "Nginx",
-      icon: "images/nginx.svg",
+      icon: "leo-portifolio/images/nginx.svg",
       level: 65,
     },
   ];
