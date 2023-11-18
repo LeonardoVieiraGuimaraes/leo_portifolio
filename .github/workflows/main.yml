@@ -9,12 +9,12 @@ jobs:
   trigger-workflows:
     runs-on: ubuntu-latest
     steps:
-      #   - name: Trigger GitPage Workflow
-      #     uses: peter-evans/repository-dispatch@v1
-      #     with:
-      #       token: ${{ secrets.REPO_ACCESS_TOKEN }}
-      #       repository: https://github.com/LeonardoVieiraGuimaraes/leo-portifolio
-      #       event-type: start-gitpage
+      - name: Trigger GitPage Workflow
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: https://github.com/LeonardoVieiraGuimaraes/leo-portifolio
+          event-type: start-gitpage
 
       - name: Trigger Hostinger Workflow
         uses: peter-evans/repository-dispatch@v1
