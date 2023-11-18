@@ -56,7 +56,7 @@ export default function About() {
         >
           <FaGithub size={24} />
         </a>
-        <a
+        {/* <a
           href="https://www.instagram.com/seu_usuario_do_instagram"
           target="_blank"
           rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export default function About() {
           title="Meu Instagram"
         >
           <FaInstagram size={24} />
-        </a>
+        </a> */}
         <a
           href="https://www.linkedin.com/in/leonardo-vieira-guimaraes-270b8451/"
           target="_blank"
@@ -153,7 +153,7 @@ export default function About() {
               </tbody>
             </table>
           </div>
-          <div className="absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-about-perfil bg-cover bg-center md:-left-1 md:-top-1 md:h-64 md:w-40"></div>
+          <div className="absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-profile bg-cover bg-center md:-left-1 md:-top-1 md:h-64 md:w-40"></div>
         </div>
       </div>
     </section>
