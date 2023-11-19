@@ -39,10 +39,9 @@ jobs:
           username: ${{ secrets.sftp_user }}
           key: ${{ secrets.sftp_private_key }}
           port: ${{ secrets.sftp_port }}
-          source: "./leo-portifolio"
-          target: "."
+          source: "./leo-portifolio-v1"
+          target: "/root"
           overwrite: true
-          rm: true
 
       # - name: 📂 Sync files
       #   uses: pressidium/lftp-mirror-action@v1
@@ -62,7 +61,8 @@ jobs:
         with:
           host: ${{ secrets.sftp_host }}
           username: ${{ secrets.sftp_user }}
-          password: ${{ secrets.sftp_password }}
+          # password: ${{ secrets.sftp_password }}
+          key: ${{ secrets.sftp_private_key }}
           port: ${{ secrets.sftp_port }}
           script: |
             cd leo-portifolio
