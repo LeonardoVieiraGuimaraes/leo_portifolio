@@ -40,8 +40,9 @@ jobs:
           key: ${{ secrets.sftp_private_key }}
           port: ${{ secrets.sftp_port }}
           source: "./leo-portifolio"
-          target: "/"
+          target: "."
           overwrite: true
+          rm: true
 
       # - name: 📂 Sync files
       #   uses: pressidium/lftp-mirror-action@v1
