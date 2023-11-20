@@ -13,8 +13,7 @@ export default function About() {
           <span className="mr-2 font-headline text-3xl">Sobre</span>
           <span className="font-handwriting text-4xl">Mim</span>
         </h2>
-
-        <p className=" text-justify">
+        <p className=" text-justify text-lg text-gray-700">
           Tenho varios projetos no meu repositório no{" "}
           <a
             href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
@@ -24,9 +23,6 @@ export default function About() {
           >
             GitHub
           </a>
-          {/* <span>
-              <FaGithub size={15} />
-            </span> */}
           , profissional dedicado, conto com uma sólida formação acadêmica e
           ampla experiência. Mestre em Modelagem Computacional e Sistemas pela
           UNIMONTES, minha expertise também abrange especialização em Matemática
