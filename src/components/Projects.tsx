@@ -5,35 +5,35 @@ export default function Projects() {
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "projeto1",
+      image: "enfermagemProjeto01",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "projeto1",
+      image: "",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "projeto1",
+      image: "",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema de Enfermagem",
       description: "Descrição do projeto 2",
-      image: "projeto1",
+      image: "",
       link: "https://enfermagem.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Programacao Orientado a Objeto",
       description: "Repositório Aula Uniasselvi",
-      image: "projeto1",
+      image: "",
       link: "https://github.com/LeonardoVieiraGuimaraes/Programacao-Orientado-a-Objetos.git",
       colSpan: "col-span-1",
     },
@@ -47,7 +47,7 @@ export default function Projects() {
     {
       title: "Projeto 5",
       description: "Descrição do projeto 5",
-      image: "projeto1",
+      image: "/images/projects/enfermagemProjeto01",
       link: "#",
       colSpan: "col-span-1",
     },
@@ -79,17 +79,16 @@ export default function Projects() {
               <div
                 key={index}
                 className={`group relative h-52 cursor-default rounded-lg ${project.colSpan} bg-cover bg-center bg-${project.image}`}
-                // style={{ backgroundImage: `url('${project.image}')` }}
+                style={{ backgroundImage: `url(${project.image})` }}
               >
                 {/* <img src={`${project.image}`} alt="" /> */}
-                <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70">
-                  {" "}
-                </div>
+
+                <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70"></div>
                 <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100">
                   <h4 className="font-headline text-lg text-center font-semibold ">
                     {project.title}
                   </h4>
-                  <p className=" mb-4 text-sm">{project.description}</p>
+                  <p className="mb-4 text-sm">{project.description}</p>
 
                   <button
                     onClick={() => window.open(project.link, "_blank")}
