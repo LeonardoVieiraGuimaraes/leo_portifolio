@@ -85,7 +85,6 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div
                 className={`group relative cursor-default rounded-lg ${project.colSpan}`}
-                // style={{ backgroundImage: `url(${project.image})` }}
                 key={index}
               >
                 <img
