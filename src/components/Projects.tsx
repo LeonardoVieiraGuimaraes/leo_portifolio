@@ -5,21 +5,21 @@ export default function Projects() {
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "enfermagemProjeto01",
+      image: "/images/projects/enfermagemProjeto01.jpg",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "",
+      image: "/images/projects/enfermagemProjeto02.jpg",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "",
+      image: "/images/projects/artigoBovinosRFID.jpg",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
@@ -47,7 +47,7 @@ export default function Projects() {
     {
       title: "Projeto 5",
       description: "Descrição do projeto 5",
-      image: "/images/projects/enfermagemProjeto01",
+      image: "enfermagemProjeto01",
       link: "#",
       colSpan: "col-span-1",
     },
@@ -77,18 +77,22 @@ export default function Projects() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {projects.map((project, index) => (
               <div
+                className={`group relative cursor-default rounded-lg ${project.colSpan}`}
+                // style={{ backgroundImage: `url(${project.image})` }}
                 key={index}
-                className={`group relative h-52 cursor-default rounded-lg ${project.colSpan} bg-cover bg-center bg-${project.image}`}
-                style={{ backgroundImage: `url(${project.image})` }}
               >
-                {/* <img src={`${project.image}`} alt="" /> */}
+                <img
+                  className={`h-52 cursor-default rounded-lg bg-cover bg-center`}
+                  src={`${project.image}`}
+                  alt=""
+                />
 
-                <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70"></div>
+                <span className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70"></span>
                 <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100">
                   <h4 className="font-headline text-lg text-center font-semibold ">
                     {project.title}
                   </h4>
-                  <p className="mb-4 text-sm">{project.description}</p>
+                  <p className="p-4">{project.description}</p>
 
                   <button
                     onClick={() => window.open(project.link, "_blank")}
