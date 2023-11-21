@@ -20,8 +20,8 @@ export default function Projects() {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
       image: "/images/projects/artigoBovinosRFID.jpg",
-      image:
-        "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80",
+      // image:
+      //   "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
@@ -53,8 +53,8 @@ export default function Projects() {
       title: "Projeto 5",
       description: "Descrição do projeto 5",
       image: "enfermagemProjeto01",
-      image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9iaWxlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      // image:
+      //   "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9iaWxlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       link: "#",
       colSpan: "col-span-1",
     },
