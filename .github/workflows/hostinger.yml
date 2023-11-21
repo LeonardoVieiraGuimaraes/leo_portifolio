@@ -1,9 +1,10 @@
-# .github/workflows/hostinger.yml
 name: Hostinger Workflow
 
 on:
-  repository_dispatch:
-    types: [start-hostinger]
+  push:
+    branches:
+      - main
+  # workflow_dispatch:
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -31,25 +32,37 @@ jobs:
           cp nginx.conf leo-portifolio/
           cp -r dist leo-portifolio/dist
 
-      - name: 📂 Sync files
-        uses: pressidium/lftp-mirror-action@v1
+      - name: Copy files
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.sftp_host }}
-          user: ${{ secrets.sftp_user }}
-          pass: ${{ secrets.sftp_password }}
+          username: ${{ secrets.sftp_user }}
+          key: ${{ secrets.sftp_private_key }}
           port: ${{ secrets.sftp_port }}
-          localDir: "./leo-portifolio"
-          remoteDir: "leo-portifolio"
+          source: "./leo-portifolio"
+          target: "/root"
+          overwrite: true
 
-          # ignoreFile: '.lftp_ignore'
-          # reverse: true
+      # - name: 📂 Sync files
+      #   uses: pressidium/lftp-mirror-action@v1
+      #   with:
+      #     host: ${{ secrets.sftp_host }}
+      #     user: ${{ secrets.sftp_user }}
+      #     pass: ${{ secrets.sftp_password }}
+      #     port: ${{ secrets.sftp_port }}
+      #     localDir: "./leo-portifolio"
+      #     remoteDir: "leo-portifolio"
+
+      # ignoreFile: '.lftp_ignore'
+      # reverse: true
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.sftp_host }}
           username: ${{ secrets.sftp_user }}
-          password: ${{ secrets.sftp_password }}
+          # password: ${{ secrets.sftp_password }}
+          key: ${{ secrets.sftp_private_key }}
           port: ${{ secrets.sftp_port }}
           script: |
             cd leo-portifolio

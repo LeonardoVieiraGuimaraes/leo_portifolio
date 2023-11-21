@@ -2,7 +2,8 @@ import {
   HiCommandLine,
   HiComputerDesktop,
   HiDevicePhoneMobile,
-} from "react-icons/hi2"
+  HiOutlineAcademicCap,
+} from "react-icons/hi2";
 
 export default function Services() {
   const services = [
@@ -14,21 +15,22 @@ export default function Services() {
     },
     {
       title: "Sistemas",
-      description: "Desenvolvimento de Sistemas com Django e Python.",
+      description: "Desenvolvimento de Sistemas e analise de dados com Python.",
       icon: <HiCommandLine className="h-12 w-12" />,
     },
     {
       title: "Mobile",
-      description: "Desenvolvimento de aplicativos Android.",
+      description:
+        "Desenvolvimento de aplicativos Android com React Native, Kivy e Kodular.",
       icon: <HiDevicePhoneMobile className="h-12 w-12" />,
     },
     {
-      title: "Professor Mestre",
-      description: "Professor das diversas áread da Matemática e Tecnologia da Informação.",
-      icon: <HiDevicePhoneMobile className="h-12 w-12" />,
+      title: "Professor",
+      description:
+        "Professor das diversas áread da Matemática e Tecnologia da Informação.",
+      icon: <HiOutlineAcademicCap className="h-12 w-12" />,
     },
-
-  ]
+  ];
 
   return (
     <section className="container mx-auto my-12 max-w-4xl p-4" id="services">
@@ -40,9 +42,9 @@ export default function Services() {
           <span className="mr-2 font-headline text-3xl">Meus</span>
           <span className="font-handwriting text-4xl">Serviços</span>
         </h2>
-        <p className=" text-sm text-gray-600">
+        <p className=" text-lg text-gray-700">
           Posso atender uma gama completa de serviços, do front-end ao back-end
-          com banco de dados e sistemas.
+          com banco de dados, sistemas e professor.
         </p>
       </div>
 
@@ -59,5 +61,5 @@ export default function Services() {
         ))}
       </div>
     </section>
-  )
+  );
 }
