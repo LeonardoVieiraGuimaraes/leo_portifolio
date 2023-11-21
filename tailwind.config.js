@@ -10,6 +10,11 @@ export default {
     extend: {
       backgroundImage: {
         profile: "url('/images/fotoPerfil.jpg')",
+        projetoEnfermagem01: "url('/images/projetoEnfermagem01.jpg')",
+        projetoEnfermagem02: "url('/images/projetoEnfermagem02.jpg')",
+        dissertacaoEngenhariaComputacao:
+          "url('/images/dissertacaoEngenhariaComputacao.jpg')",
+        dissertacaoMestrado: "url('/images/dissertacaoMestrado.jpg')",
       },
     },
   },
