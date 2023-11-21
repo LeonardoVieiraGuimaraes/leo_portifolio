@@ -4,12 +4,15 @@ import {
   FaInfoCircle,
   FaEnvelope,
   FaLaptopCode,
-  FaProjectDiagram,
+  FaArrowUp,
   FaTools,
+  FaBook,
+  FaVideo,
 } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,9 +22,27 @@ export default function Header() {
     { name: "Home", icon: <FaHome />, href: "#" },
     { name: "Sobre", icon: <FaInfoCircle />, href: "#about" },
     { name: "Serviços", icon: <FaLaptopCode />, href: "#services" },
-    { name: "Projetos", icon: <FaProjectDiagram />, href: "#projects" },
+    {
+      name: "Projetos",
+      icon: dropdownOpen ? (
+        <FaArrowUp className="transform transition-transform duration-500 rotate-180" />
+      ) : (
+        <FaArrowUp className="transform transition-transform duration-500" />
+      ),
+      href: "#projects",
+    },
     { name: "Skills", icon: <FaTools />, href: "#skills" },
-    { name: "Contato", icon: <FaEnvelope />, href: "#contact" },
+    { name: "Fale Comigo", icon: <FaEnvelope />, href: "#contact" },
+  ];
+
+  const projects = [
+    { name: "Academicos", icon: <FaBook />, href: "#projectsAcademics" },
+    {
+      name: "Desenlvolvedor",
+      icon: <FaLaptopCode />,
+      href: "#projectsDeveloper",
+    },
+    { name: "Video Aulas", icon: <FaVideo />, href: "#projectsProfessor" },
   ];
 
   return (
@@ -87,16 +108,43 @@ export default function Header() {
               </div>
               <div className="hidden md:block md:ml-6 ">
                 <div className="flex space-x-4 ">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-xl font-semibold"
-                    >
-                      {link.icon}
-                      <span className="ml-2">{link.name}</span>
-                    </a>
-                  ))}
+                  {navLinks.map((link, index) =>
+                    link.name === "Projetos" ? (
+                      <div className="relative" key={index}>
+                        <button
+                          onClick={() => setDropdownOpen(!dropdownOpen)}
+                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-xl font-semibold"
+                          key={index}
+                        >
+                          {link.icon}
+                          <span className="ml-2">{link.name}</span>
+                        </button>
+                        {dropdownOpen && (
+                          <div className="absolute left-0 w-auto pt-2 pb-2  bg-gray-800">
+                            {projects.map((projects, index) => (
+                              <a
+                                key={index}
+                                href={projects.href}
+                                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                              >
+                                {projects.icon}
+                                <span className="ml-2">{projects.name}</span>
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <a
+                        key={index}
+                        href={link.href}
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-xl font-semibold"
+                      >
+                        {link.icon}
+                        <span className="ml-2">{link.name}</span>
+                      </a>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -107,16 +155,42 @@ export default function Header() {
           id="mobile-menu"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
-              >
-                {link.icon}
-                <span className="ml-2">{link.name}</span>
-              </a>
-            ))}
+            {navLinks.map((link, index) =>
+              link.name === "Projetos" ? (
+                <div className="relative" key={index}>
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                  >
+                    {link.icon}
+                    <span className="ml-2">{link.name}</span>
+                  </button>
+                  {dropdownOpen && (
+                    <div className="px-2 pt-2 pb-3 space-y-1">
+                      {projects.map((projects, index) => (
+                        <a
+                          key={index}
+                          href={projects.href}
+                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                        >
+                          {projects.icon}
+                          <span className="ml-2">{projects.name}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                >
+                  {link.icon}
+                  <span className="ml-2">{link.name}</span>
+                </a>
+              )
+            )}
           </div>
         </div>
       </nav>
