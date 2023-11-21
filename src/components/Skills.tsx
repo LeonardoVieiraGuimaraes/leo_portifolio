@@ -27,37 +27,37 @@ export default function Skills() {
     },
     {
       name: "JavaScript",
-      icon: "images/skills//javascript.svg",
+      icon: "images/skills/javascript.svg",
       level: 90,
     },
     {
       name: "React.js",
-      icon: "images/skills//react.svg",
+      icon: "images/skills/react.svg",
       level: 85,
     },
     {
       name: "Node.js",
-      icon: "images/skills//nodejs.svg",
+      icon: "images/skills/nodejs.svg",
       level: 65,
     },
     {
       name: "Django",
-      icon: "images/skills//django.svg",
+      icon: "images/skills/django.svg",
       level: 65,
     },
     {
       name: "Python",
-      icon: "images/skills//python.svg",
+      icon: "images/skills/python.svg",
       level: 65,
     },
     {
       name: "Docker",
-      icon: "images/skills//docker.svg",
+      icon: "images/skills/docker.svg",
       level: 65,
     },
     {
       name: "Nginx",
-      icon: "images/skills//nginx.svg",
+      icon: "images/skills/nginx.svg",
       level: 65,
     },
   ];

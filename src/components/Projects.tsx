@@ -5,23 +5,21 @@ export default function Projects() {
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image: "images/projetos/projeto_enfermagem01.jpg",
-      // image:
-      //   "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80",
+      image: "/images/projects/enfermagemProjeto01.jpg",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
-      image:
-        "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80",
+      image: "/images/projects/enfermagemProjeto02.jpg",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema SAE",
       description: "Descrição do projeto 1",
+      image: "/images/projects/artigoBovinosRFID.jpg",
       image:
         "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80",
       link: "https://sae.leoproti.com.br/",
@@ -54,6 +52,7 @@ export default function Projects() {
     {
       title: "Projeto 5",
       description: "Descrição do projeto 5",
+      image: "enfermagemProjeto01",
       image:
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9iaWxlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
       link: "#",
@@ -85,19 +84,22 @@ export default function Projects() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {projects.map((project, index) => (
               <div
+                className={`group relative cursor-default rounded-lg ${project.colSpan}`}
+                // style={{ backgroundImage: `url(${project.image})` }}
                 key={index}
-                className={`group relative h-52 cursor-default rounded-lg ${project.colSpan} bg-cover bg-center`}
-                style={{ backgroundImage: `url('${project.image}')` }}
               >
-                {/* <img src={`${project.image}`} alt="" /> */}
-                <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70">
-                  {" "}
-                </div>
+                <img
+                  className={`h-52 cursor-default rounded-lg bg-cover bg-center`}
+                  src={`${project.image}`}
+                  alt=""
+                />
+
+                <span className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70"></span>
                 <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100">
                   <h4 className="font-headline text-lg text-center font-semibold ">
                     {project.title}
                   </h4>
-                  <p className=" mb-4 text-sm">{project.description}</p>
+                  <p className="p-4">{project.description}</p>
 
                   <button
                     onClick={() => window.open(project.link, "_blank")}
