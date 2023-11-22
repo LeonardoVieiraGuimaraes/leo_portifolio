@@ -6,7 +6,7 @@ export default function About() {
   const age = differenceInYears(today, birthDate);
 
   return (
-    <section className="container mx-auto my-4 max-w-5xl p-4" id="about">
+    <section className="container mx-auto my-4 pt-10 max-w-5xl p-4" id="about">
       <div className=" p-4 text-center">
         <h2 className=" z-50 mb-2 font-bold text-blue-900">
           <span className="mr-2 font-headline text-3xl">Sobre</span>

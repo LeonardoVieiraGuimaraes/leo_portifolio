@@ -49,8 +49,8 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="bg-gray-800 fixed w-full z-50 py-2 ">
-        <div className="max-w-7xl mx-auto px-2 md:px-6 lg:px-8">
+      <nav className="bg-gray-800 fixed w-full z-50 ">
+        <div className="max-w-5xl mx-auto px-2 md:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
               <button
@@ -72,12 +72,12 @@ export default function Header() {
               <div className="flex-shrink-0">
                 <a href="/">
                   <img
-                    className="block lg:hidden h-16 w-auto"
+                    className="block lg:hidden h-12 w-auto"
                     src="images/logo.svg"
                     alt="Logo"
                   />
                   <img
-                    className="hidden lg:block h-16 w-auto"
+                    className="hidden lg:block h-12 w-auto"
                     src="images/logo.svg"
                     alt="Logo"
                   />
@@ -115,7 +115,7 @@ export default function Header() {
                       <a
                         key={index}
                         href={link.href}
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-xl font-semibold"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold"
                       >
                         {link.icon}
                         <span className="ml-2">{link.name}</span>
