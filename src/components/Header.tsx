@@ -95,7 +95,7 @@ export default function Header() {
                         <button
                           onClick={() => setDropdownOpen(!dropdownOpen)}
                           onMouseOver={() => setDropdownOpen(true)}
-                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-xl font-semibold"
+                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold"
                           key={index}
                         >
                           {link.icon} {link.name}
