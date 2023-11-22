@@ -34,13 +34,15 @@ export default function ProjectsDeveloper() {
         <div className="relative p-6 text-center">
           <h2 className="relative z-40 mb-2 text-white">
             <span className="mr-2 font-headline text-3xl font-semibold z-40">
-              Projetos Desenvolvimento de Sistemas
+              Projetos
             </span>
-            {/* <span className="font-handwriting text-4xl">Portfólio</span> */}
+            <span className="font-handwriting text-4xl">
+              Desenvolvimento de Sistemas
+            </span>
           </h2>
           <p className="relative text-lg text-white">
-            Alguns dos projetos pessoais e para os mestrados já realizei ao
-            longo da minha trajetória como programador front-end.
+            Ao longo da minha carreira como desenvolvedor front-end e back-end,
+            realizei diversos projetos significativos. Aqui estão alguns deles:
           </p>
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>

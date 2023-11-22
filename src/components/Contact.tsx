@@ -1,24 +1,24 @@
-import emailjs from "@emailjs/browser"
-import { FormEvent, useRef, useState } from "react"
-import { FaSpinner, FaWhatsapp } from "react-icons/fa"
+import emailjs from "@emailjs/browser";
+import { FormEvent, useRef, useState } from "react";
+import { FaSpinner, FaWhatsapp } from "react-icons/fa";
 import {
   HiCheckCircle,
   HiOutlineEnvelope,
   HiOutlineMapPin,
-} from "react-icons/hi2"
+} from "react-icons/hi2";
 
 export default function Contact() {
-  const form = useRef<HTMLFormElement>(null)
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState(false)
+  const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const sendEmail = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    if (!form.current) return
+    if (!form.current) return;
 
-    setLoading(true)
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -29,16 +29,16 @@ export default function Contact() {
       )
       .then(
         () => {
-          setSuccess(true)
-          setLoading(false)
+          setSuccess(true);
+          setLoading(false);
         },
         (error) => {
-          setError(true)
-          setLoading(false)
-          console.error(error)
+          setError(true);
+          setLoading(false);
+          console.error(error);
         }
-      )
-  }
+      );
+  };
 
   const contacts = [
     {
@@ -59,10 +59,10 @@ export default function Contact() {
       link: "https://maps.app.goo.gl/J8GYMwibv7pjR8HE7",
       icon: <HiOutlineMapPin className="h-10 w-10" />,
     },
-  ]
+  ];
 
   return (
-    <section className="bg-blue-700 text-white" id="contact" >
+    <section className="bg-blue-700 text-white" id="contact">
       <div className="container mx-auto max-w-4xl p-4 py-8">
         <div className="mb-6">
           <h2 className="z-50 mb-2">
@@ -130,9 +130,9 @@ export default function Contact() {
               <div>
                 <button
                   type="submit"
-                  className="button flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="button flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
                   disabled={loading}
-                  >
+                >
                   {loading && <FaSpinner className="h-4 w-4 animate-spin" />}
                   {success && <HiCheckCircle className="h-4 w-4" />}
                   Enviar mensagem
@@ -170,5 +170,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

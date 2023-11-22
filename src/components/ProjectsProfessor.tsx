@@ -5,7 +5,7 @@ export default function ProjectsProfessor() {
     {
       title: "Estátitica e Probabilidade",
       description: "Video aulas de Estátitica e Probabilidade",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/professor/professor02.jpg",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
       colSpan: "col-span-1",
     },
@@ -13,14 +13,14 @@ export default function ProjectsProfessor() {
     {
       title: "Matemática Financeira",
       description: "Video aulas de Matemática Financeira",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/professor/professor06.jpg",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
       colSpan: "col-span-1",
     },
     {
       title: "Projeto Integrador",
       description: "Video aulas Projeto Integrador",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/professor/professor03.jpg",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
       colSpan: "col-span-1",
     },
@@ -35,13 +35,13 @@ export default function ProjectsProfessor() {
         <div className="relative p-6 text-center">
           <h2 className="relative z-40 mb-2 text-white">
             <span className="mr-2 font-headline text-3xl font-semibold z-40">
-              Projetos &
+              Projetos e Videoaulas
             </span>
-            <span className="font-handwriting text-4xl">Portfólio</span>
+            <span className="font-handwriting text-4xl">Professor</span>
           </h2>
           <p className="relative text-lg text-white">
-            Alguns dos projetos pessoais e que já realizei ao longo da minha
-            trajetória como programador front-end.
+            A seguir, apresento algumas videoaulas e projetos que elaborei
+            durante minha trajetória como professor.
           </p>
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>

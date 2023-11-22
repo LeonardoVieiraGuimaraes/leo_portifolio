@@ -1,5 +1,4 @@
 import { differenceInYears } from "date-fns";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function About() {
   const birthDate = new Date(1984, 10 - 1, 2); // Substitua pela sua data de nascimento (ano, mês - 1, dia)
@@ -43,15 +42,6 @@ export default function About() {
         </p>
       </div>
       <div className="flex justify-center">
-        <a
-          href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-500 hover:underline ml-4"
-          title="Meu Repositório GitHub"
-        >
-          <FaGithub size={24} />
-        </a>
         {/* <a
           href="https://www.instagram.com/seu_usuario_do_instagram"
           target="_blank"
@@ -61,15 +51,6 @@ export default function About() {
         >
           <FaInstagram size={24} />
         </a> */}
-        <a
-          href="https://www.linkedin.com/in/leonardo-vieira-guimaraes-270b8451/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-500 hover:underline ml-4"
-          title="Meu LinkedIn"
-        >
-          <FaLinkedin size={24} />
-        </a>
       </div>
       <div className=" relative mx-auto mt-20 max-w-lg">
         <div className=" w-full rounded-lg bg-blue-100 p-4 ps-20 md:h-64 md:ps-48">
