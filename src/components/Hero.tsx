@@ -21,8 +21,8 @@ export default function Hero() {
             </span>
           </h1>
           <h2 className="font-semibold flex items-center gap-2 text-center md:text-left">
-            <div className="h-1 w-12 rounded-full bg-blue-800"></div>+
-            Desenvolvedor Front-end e Back-endd
+            <div className="h-1 w-12 rounded-full bg-blue-800"></div>Professor e
+            Desenvolvedor Front-end e Back-end
           </h2>
           <p className="text-gray-100 my-6 text-justify">
             Desenvolvedor web apaixonado por código, graduado em Matemática e
