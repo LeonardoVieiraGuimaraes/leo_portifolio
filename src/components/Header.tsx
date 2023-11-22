@@ -62,9 +62,9 @@ export default function Header() {
               >
                 <span className="sr-only">Open main menu</span>
                 {isOpen ? (
-                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon className="h-8 w-8" aria-hidden="true" />
                 ) : (
-                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                  <Bars3Icon className="h-8 w-8" aria-hidden="true" />
                 )}
               </button>
             </div>
