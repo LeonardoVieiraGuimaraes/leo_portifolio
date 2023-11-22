@@ -20,8 +20,8 @@ function App() {
       <Hero />
       <About />
       <Services />
-      <ProjectsDeveloper />
       <ProjectsAcademics />
+      <ProjectsDeveloper />
       <ProjectsProfessor />
 
       <Skills />

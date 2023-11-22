@@ -87,14 +87,18 @@ export default function Header() {
                 <div className="flex space-x-4 ">
                   {navLinks.map((link, index) =>
                     link.name === "Projetos" ? (
-                      <div className="relative" key={index}>
+                      <div
+                        className="relative"
+                        key={index}
+                        onMouseLeave={() => setDropdownOpen(false)}
+                      >
                         <button
                           onClick={() => setDropdownOpen(!dropdownOpen)}
+                          onMouseOver={() => setDropdownOpen(true)}
                           className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-xl font-semibold"
                           key={index}
                         >
-                          {link.icon}
-                          <span className="ml-2">{link.name}</span>
+                          {link.icon} {link.name}
                         </button>
                         {dropdownOpen && (
                           <div className="absolute left-0 w-auto pt-2 pb-2  bg-gray-800">
@@ -134,9 +138,14 @@ export default function Header() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link, index) =>
               link.name === "Projetos" ? (
-                <div className="relative" key={index}>
+                <div
+                  className="relative"
+                  key={index}
+                  onMouseLeave={() => setDropdownOpen(false)}
+                >
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
+                    onMouseOver={() => setDropdownOpen(true)}
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
                   >
                     {link.icon}
