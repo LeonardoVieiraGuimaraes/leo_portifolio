@@ -19,7 +19,7 @@ export default function About() {
         </a> */}
       </div>
       <div className="relative mx-auto mt-20">
-        <div className=" w-full rounded-lg bg-blue-100 p-4 ps-20  md:ps-48">
+        <div className=" w-full rounded-lg bg-blue-100 p-4 ps-16  md:ps-44 md:pr-12">
           <div className=" p-4 text-center">
             <h2 className=" z-50 mb-2 font-bold text-blue-900">
               <span className="mr-2 font-headline text-3xl">Sobre</span>
