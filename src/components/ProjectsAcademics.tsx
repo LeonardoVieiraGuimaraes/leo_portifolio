@@ -31,7 +31,7 @@ export default function ProjectsAcademics() {
         "Mineração de ados analisando as ocorrências de acidentes no trânsito brasileiro",
       image: "/images/projects/academics/academics04.jpg",
       link: "https://drive.google.com/file/d/1OXEAMs3jHTyWvv7OtsPg8gESEDdbbtxO/view?usp=drive_link",
-      colSpan: "col-span-1  ",
+      colSpan: "col-span-1",
     },
     {
       title:
@@ -40,14 +40,14 @@ export default function ProjectsAcademics() {
         "Melhorando a detecção de pontos de recursos baseados em CNN por meio de informações correspondentes",
       image: "/images/projects/academics/academics05.jpg",
       link: "https://drive.google.com/file/d/1EAIF3-2NhG-A2O-y7W1S8Q1ASOn2Krfi/view?usp=sharing",
-      colSpan: "col-span-2",
+      colSpan: "col-span-1 md:col-span-2",
     },
     {
       title: "Sistema de Identificação de Bovinos Usando RFID",
       description: "Artigo publicado ISSN 22367160",
       image: "/images/projects/academics/academics02.jpg",
       link: "https://drive.google.com/file/d/1WDsuPN1N3Tw-WZdfPAbRMYgtCF8KncLu/view?usp=sharing",
-      colSpan: "col-span-1",
+      colSpan: "col-span-1/2",
     },
 
     {
