@@ -5,15 +5,15 @@ export default function ProjectsAcademics() {
     {
       title: "Dissertaçao Graduação Engenharia da Computação",
       description: "Sistema de Identificação de Bovinos Usando RFID",
-      image: "/images/projectsAcademics/artigoBovinosRFID.jpg",
-      link: "https://drive.google.com/file/d/1KrTXep4Slb2sqP30jQ2XrmdGfi_Qts6f/view?usp=sharing",
+      image: "/images/projects/academics/academics01.jpg",
+      link: "https://drive.google.com/file/d/1KrTXep4Slb02sqP30jQ2XrmdGfi_Qts6f/view?usp=sharing",
       colSpan: "col-span-1",
     },
     {
       title: "Dissertação Mestrado",
       description:
         "Monitoramento no processo de desidratação de unvas basedo em imagens ",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/academics/academics02.jpg",
       link: "https://drive.google.com/file/d/1-l2qG_lpE9hZyoBhIYU7o79xSEl6815P/view",
       colSpan: "col-span-1",
     },
@@ -21,7 +21,7 @@ export default function ProjectsAcademics() {
       title: "Analise das notas do Enade e Enem",
       description:
         "Mineração de dados analisando a Influência das notas obtidas pelos anunos do Enem e Enade",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/academics/academics03.jpg",
       link: "https://drive.google.com/file/d/1MdopkYDRjYKNr92dlhYR50HfK0z3nIFI/view?usp=drive_link",
       colSpan: "col-span-1",
     },
@@ -29,39 +29,39 @@ export default function ProjectsAcademics() {
       title: "Ocorrências de Acidentes no Trânsito Brasileiro",
       description:
         "Mineração de ados analisando as ocorrências de acidentes no trânsito brasileiro",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/academics/academics04.jpg",
       link: "https://drive.google.com/file/d/1OXEAMs3jHTyWvv7OtsPg8gESEDdbbtxO/view?usp=drive_link",
-      colSpan: "col-span-2",
+      colSpan: "col-span-1",
     },
     {
       title:
         "Improving CNN Based Feature Point Detection Through Matching Information",
       description:
         "Melhorando a detecção de pontos de recursos baseados em CNN por meio de informações correspondentes",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/academics/academics05.jpg",
       link: "https://drive.google.com/file/d/1EAIF3-2NhG-A2O-y7W1S8Q1ASOn2Krfi/view?usp=sharing",
-      colSpan: "col-span-2",
+      colSpan: "col-span-1 md:col-span-2",
     },
     {
       title: "Sistema de Identificação de Bovinos Usando RFID",
       description: "Artigo publicado ISSN 22367160",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/academics/academics02.jpg",
       link: "https://drive.google.com/file/d/1WDsuPN1N3Tw-WZdfPAbRMYgtCF8KncLu/view?usp=sharing",
-      colSpan: "col-span-1",
+      colSpan: "col-span-1/2",
     },
 
     {
       title:
         "A Matemática Financeira Aplicada em Empréstimos e Financiamentos Bancários",
       description: "Artigo publicado ISSN 22367160",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      image: "/images/projects/academics/academics07.jpg",
       link: "https://drive.google.com/file/d/1owo7hjjOpRAFNyyYyA6zktvlsPK-P3Eu/view?usp=sharing",
       colSpan: "col-span-1",
     },
     {
       title: "Projeto Visão Computacional",
-      description: "Projetos do Doutrado de Ciência da Computação UFMG",
-      image: "/images/projectsDeveloper/enfermagemProjeto01.jpg",
+      description: "Projetos Doutrado de Ciência da Computação UFMG",
+      image: "/images/projects/academics/academics08.jpg",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
       colSpan: "col-span-1",
     },
@@ -76,12 +76,14 @@ export default function ProjectsAcademics() {
         <div className="relative p-6 text-center">
           <h2 className="relative z-40 mb-2 text-white">
             <span className="mr-2 font-headline text-3xl font-semibold z-40">
-              Projetos Academicos
+              Projetos
             </span>
-            <span className="font-handwriting text-4xl">Portfólio</span>
+            <span className="font-handwriting text-4xl">Academicos</span>
           </h2>
           <p className="relative text-lg text-white">
-            Projetos Academicos realizados no decorrer da minha trajetória
+            Durante minha jornada acadêmica e carreira profissional, tive a
+            oportunidade de desenvolver várias dissertações, artigos e projetos
+            importantes. A seguir, apresento alguns desses trabalhos:
           </p>
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>
