@@ -3,10 +3,9 @@ import {
   FaDiscord,
   FaInstagram,
   FaFacebook,
-  FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-
+import { FaXTwitter } from "react-icons/fa6";
 const socialLinks = [
   {
     name: "Github",
@@ -31,7 +30,7 @@ const socialLinks = [
   {
     name: "Twitter",
     url: "https://twitter.com/Leonard24081612",
-    icon: FaTwitter,
+    icon: FaXTwitter,
   },
   {
     name: "Linkedin",
