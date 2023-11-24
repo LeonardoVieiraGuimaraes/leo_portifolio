@@ -28,12 +28,12 @@ export default function Skills() {
     {
       name: "JavaScript",
       icon: "images/skills/javascript.svg",
-      level: 90,
+      level: 85,
     },
     {
       name: "React.js",
       icon: "images/skills/react.svg",
-      level: 85,
+      level: 70,
     },
     {
       name: "Node.js",
@@ -43,22 +43,47 @@ export default function Skills() {
     {
       name: "Django",
       icon: "images/skills/django.svg",
-      level: 65,
+      level: 80,
     },
     {
       name: "Python",
       icon: "images/skills/python.svg",
-      level: 65,
+      level: 80,
     },
     {
       name: "Docker",
       icon: "images/skills/docker.svg",
-      level: 65,
+      level: 50,
     },
     {
       name: "Nginx",
       icon: "images/skills/nginx.svg",
-      level: 65,
+      level: 50,
+    },
+    {
+      name: "Java",
+      icon: "images/skills/java.svg",
+      level: 50,
+    },
+    {
+      name: "PHP",
+      icon: "images/skills/php.svg",
+      level: 40,
+    },
+    {
+      name: "Vue.js",
+      icon: "images/skills/vue.svg",
+      level: 20,
+    },
+    {
+      name: "Angular.js",
+      icon: "images/skills/angular.svg",
+      level: 20,
+    },
+    {
+      name: "typescript.js",
+      icon: "images/skills/typescript.svg",
+      level: 40,
     },
   ];
 
@@ -104,31 +129,33 @@ export default function Skills() {
             </h3>
 
             <div className="grid grid-cols-1 gap-4 font-semibold md:grid-cols-3">
-              {skills.map((skill, index) => (
-                <div
-                  key={`skill-${index}`}
-                  className="flex flex-row items-center gap-2 md:flex-col md:items-start"
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="h-10 w-10 rounded"
-                    />
-                  </div>
-                  <div className="w-full flex-grow">
-                    <h4 className="font-headlin text-gray-900">{skill.name}</h4>
-                    <div className="h-2.5 w-full rounded-full bg-white">
-                      <div
-                        className="h-2.5 rounded-full bg-blue-600"
-                        style={{ width: `${skill.level}%` }}
-                      >
-                        {""}
+              {skills
+                .sort((a, b) => b.level - a.level)
+                .map((skill, index) => (
+                  <div
+                    key={`skill-${index}`}
+                    className="flex flex-row items-center gap-2 md:flex-col md:items-start"
+                  >
+                    <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        className="h-10 w-10 rounded"
+                      />
+                    </div>
+                    <div className="w-full flex-grow">
+                      <h4 className="font-headlin text-gray-900">
+                        {skill.name}
+                      </h4>
+                      <div className="h-2.5 w-full rounded-full bg-white">
+                        <div
+                          className={`h-2.5 rounded-full bg-blue-600`}
+                          style={{ width: `${skill.level}%` }}
+                        ></div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>
