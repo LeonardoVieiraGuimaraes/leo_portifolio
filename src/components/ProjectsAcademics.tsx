@@ -5,15 +5,15 @@ export default function ProjectsAcademics() {
     {
       title: "Dissertaçao Graduação Engenharia da Computação",
       description: "Sistema de Identificação de Bovinos Usando RFID",
-      image: "/images/projects/academics/academics01.jpg",
-      link: "https://drive.google.com/file/d/1KrTXep4Slb02sqP30jQ2XrmdGfi_Qts6f/view?usp=sharing",
+      image: "/images/projects/academics/dissertacaoEngenhariaComputacao.png",
+      link: "https://drive.google.com/file/d/1jj_w4hFihZVSzSOlFSGCwHkuno2t5WGT/view?usp=sharing",
       colSpan: "col-span-1",
     },
     {
       title: "Dissertação Mestrado",
       description:
-        "Monitoramento no processo de desidratação de unvas basedo em imagens ",
-      image: "/images/projects/academics/academics02.jpg",
+        "Monitoramento no processo de desidratação de unvas basedo em imagens",
+      image: "/images/projects/academics/dissetacaoMestrado.png",
       link: "https://drive.google.com/file/d/1-l2qG_lpE9hZyoBhIYU7o79xSEl6815P/view",
       colSpan: "col-span-1",
     },
@@ -21,7 +21,7 @@ export default function ProjectsAcademics() {
       title: "Analise das notas do Enade e Enem",
       description:
         "Mineração de dados analisando a Influência das notas obtidas pelos anunos do Enem e Enade",
-      image: "/images/projects/academics/academics03.jpg",
+      image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
       link: "https://drive.google.com/file/d/1MdopkYDRjYKNr92dlhYR50HfK0z3nIFI/view?usp=drive_link",
       colSpan: "col-span-1",
     },
@@ -29,7 +29,8 @@ export default function ProjectsAcademics() {
       title: "Ocorrências de Acidentes no Trânsito Brasileiro",
       description:
         "Mineração de ados analisando as ocorrências de acidentes no trânsito brasileiro",
-      image: "/images/projects/academics/academics04.jpg",
+      image:
+        "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
       link: "https://drive.google.com/file/d/1OXEAMs3jHTyWvv7OtsPg8gESEDdbbtxO/view?usp=drive_link",
       colSpan: "col-span-1",
     },
@@ -38,14 +39,14 @@ export default function ProjectsAcademics() {
         "Improving CNN Based Feature Point Detection Through Matching Information",
       description:
         "Melhorando a detecção de pontos de recursos baseados em CNN por meio de informações correspondentes",
-      image: "/images/projects/academics/academics05.jpg",
+      image: "/images/projects/academics/DoutaradoVisaoComputacional.png",
       link: "https://drive.google.com/file/d/1EAIF3-2NhG-A2O-y7W1S8Q1ASOn2Krfi/view?usp=sharing",
       colSpan: "col-span-1 md:col-span-2",
     },
     {
       title: "Sistema de Identificação de Bovinos Usando RFID",
       description: "Artigo publicado ISSN 22367160",
-      image: "/images/projects/academics/academics02.jpg",
+      image: "/images/projects/academics/artigoRFIDEngenhariaComputacao.png",
       link: "https://drive.google.com/file/d/1WDsuPN1N3Tw-WZdfPAbRMYgtCF8KncLu/view?usp=sharing",
       colSpan: "col-span-1/2",
     },
@@ -54,14 +55,16 @@ export default function ProjectsAcademics() {
       title:
         "A Matemática Financeira Aplicada em Empréstimos e Financiamentos Bancários",
       description: "Artigo publicado ISSN 22367160",
-      image: "/images/projects/academics/academics07.jpg",
+      image:
+        "/images/projects/academics/especializacaoMatematicaFinanceira.png",
       link: "https://drive.google.com/file/d/1owo7hjjOpRAFNyyYyA6zktvlsPK-P3Eu/view?usp=sharing",
       colSpan: "col-span-1",
     },
     {
       title: "Projeto Visão Computacional",
       description: "Projetos Doutrado de Ciência da Computação UFMG",
-      image: "/images/projects/academics/academics08.jpg",
+      image:
+        "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
       colSpan: "col-span-1",
     },
@@ -72,7 +75,7 @@ export default function ProjectsAcademics() {
       className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
       id="projectsAcademics"
     >
-      <div className="container mx-auto max-w-4xl p-4 py-8">
+      <div className="container mx-auto max-w-6xl p-4 py-8">
         <div className="relative p-6 text-center">
           <h2 className="relative z-40 mb-2 text-white">
             <span className="mr-2 font-headline text-3xl font-semibold z-40">
@@ -88,7 +91,7 @@ export default function ProjectsAcademics() {
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>
 
-        <div className="grid grid-cols-1 mt-10 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-2 mt-10 gap-4 md:grid-cols-3">
           {projects.map((project, index) => (
             <div
               className={`group relative cursor-default rounded-lg ${project.colSpan}`}

@@ -33,7 +33,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="container mx-auto pt-12 my-12 max-w-4xl" id="services">
+    <section className="container mx-auto pt-12 my-12 max-w-6xl" id="services">
       <div className="p-4 text-center">
         <p className="text-sm font-semibold uppercase text-blue-600">
           O que faço de melhor
@@ -48,7 +48,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="mt-6 flex flex-col gap-2 md:flex-row">
+      <div className="px-2 grid grid-cols-2 mt-10 gap-4 md:grid-cols-4">
         {services.map((service, index) => (
           <div
             className="basis-1/3 rounded-lg bg-blue-700 p-4 text-white"
