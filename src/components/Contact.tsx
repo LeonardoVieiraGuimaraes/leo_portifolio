@@ -63,7 +63,7 @@ export default function Contact() {
 
   return (
     <section className="bg-blue-700 text-white" id="contact">
-      <div className="container mx-auto max-w-4xl p-4 py-8">
+      <div className="container mx-auto max-w-6xl p-4 py-8">
         <div className="mb-6">
           <h2 className="z-50 mb-2">
             <span className="mr-2 font-headline text-3xl font-semibold">

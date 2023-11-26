@@ -49,8 +49,8 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="bg-gray-800 fixed w-full z-50 ">
-        <div className="max-w-5xl mx-auto px-2 md:px-6 lg:px-8">
+      <nav className="bg-gray-800 fixed w-full z-50">
+        <div className="max-w-6xl mx-auto px-2">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
               <button
@@ -68,16 +68,16 @@ export default function Header() {
                 )}
               </button>
             </div>
-            <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
+            <div className="flex-1 md:justify-between flex items-center justify-center md:items-stretch">
               <div className="flex-shrink-0">
-                <a href="/">
+                <a href="">
                   <img
-                    className="block lg:hidden h-12 w-auto"
+                    className="block md:hidden h-14 w-auto"
                     src="images/logo.svg"
                     alt="Logo"
                   />
                   <img
-                    className="hidden lg:block h-12 w-auto"
+                    className="hidden md:block h-14 w-auto"
                     src="images/logo.svg"
                     alt="Logo"
                   />
