@@ -50,9 +50,9 @@ export default function Header() {
   return (
     <header>
       <nav className="bg-gray-800 fixed w-full z-50">
-        <div className="max-w-6xl mx-auto px-2">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="relative flex items-center justify-between h-16">
-            <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+            <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
               <button
                 type="button"
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -68,7 +68,7 @@ export default function Header() {
                 )}
               </button>
             </div>
-            <div className="flex-1 md:justify-between flex items-center justify-center md:items-stretch">
+            <div className="flex-1 md:justify-between flex items-center  md:items-stretch">
               <div className="flex-shrink-0">
                 <a href="">
                   <img

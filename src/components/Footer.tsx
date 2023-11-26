@@ -42,7 +42,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer id="footer">
-      <div className="container mx-auto flex max-w-6xl py-4 px-2 text-sm">
+      <div className="container mx-auto flex max-w-6xl py-4 px-4 text-sm">
         <div className="flex-grow flex items-center">
           <img src="/images/logo.svg" alt="Logo" className="h-14 w-auto" />
         </div>
