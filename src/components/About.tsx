@@ -6,9 +6,8 @@ export default function About() {
   const age = differenceInYears(today, birthDate);
 
   return (
-    <section className="container mx-auto my-4 max-w-5xl p-5" id="about">
-      <div className="flex justify-center">
-        {/* <a
+    <section className="container mx-auto my-4  p-5" id="about">
+      {/* <a
           href="https://www.instagram.com/seu_usuario_do_instagram"
           target="_blank"
           rel="noopener noreferrer"
@@ -17,8 +16,8 @@ export default function About() {
         >
           <FaInstagram size={24} />
         </a> */}
-      </div>
-      <div className="relative mx-auto mt-20">
+
+      <div className="relative mx-auto mt-20 max-w-6xl">
         <div className=" w-full rounded-lg bg-blue-100 p-4 ps-16  md:ps-44 md:pr-12">
           <div className=" p-4 text-center">
             <h2 className=" z-50 mb-2 font-bold text-blue-900">

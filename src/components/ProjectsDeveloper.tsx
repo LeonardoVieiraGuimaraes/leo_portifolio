@@ -5,21 +5,21 @@ export default function ProjectsDeveloper() {
     {
       title: "Sistema SAE",
       description: "Projeto Mestrado de Enfermagem Atendimento Gestantes",
-      image: "/images/projects/developer/developer01.jpg",
+      image: "/images/projects/developer/projetoEnfermagem01.png",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Sistema Atendimento ao Paciente",
       description: "Projeto Desenvolvido em Dajngo",
-      image: "/images/projects/developer/developer02.jpg",
+      image: "/images/projects/developer/projetoEnfermagem02.png",
       link: "https://enfermagem.leoproti.com.br/",
       colSpan: "col-span-1",
     },
     {
       title: "Primeiro Portfólio",
       description: "Portfólio desenvolvido em HTML, CSS e JavaScript",
-      image: "/images/projects/developer/developer04.jpg",
+      image: "/images/projects/developer/portifoliov1.png",
       link: "https://portifoliov1.leoproti.com.br/",
       colSpan: "col-span-1",
     },
@@ -30,7 +30,7 @@ export default function ProjectsDeveloper() {
       className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
       id="projectsDeveloper"
     >
-      <div className="container mx-auto max-w-4xl p-4 py-8">
+      <div className="container mx-auto max-w-6xl p-4 py-8">
         <div className="relative p-6 text-center">
           <h2 className="relative z-40 mb-2 text-white">
             <span className="mr-2 font-headline text-3xl font-semibold z-40">
@@ -47,7 +47,7 @@ export default function ProjectsDeveloper() {
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>
 
-        <div className="grid grid-cols-1 mt-5 mb-5 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-2 mt-5 mb-5 gap-4 md:grid-cols-3">
           {projects.map((project, index) => (
             <div
               className={`group relative cursor-default rounded-lg ${project.colSpan}`}
@@ -71,7 +71,7 @@ export default function ProjectsDeveloper() {
                   className="flex items-center justify-center px-4 py-2 bg-white text-gray-700 rounded shadow hover:bg-gray-200"
                 >
                   <HiArrowTopRightOnSquare className="h-6 w-6" />
-                  {} Ver projeto
+                  {} Ver Aulas
                 </button>
               </div>
               {/* <a

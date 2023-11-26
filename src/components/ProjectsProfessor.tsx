@@ -5,7 +5,7 @@ export default function ProjectsProfessor() {
     {
       title: "Estátitica e Probabilidade",
       description: "Video aulas de Estátitica e Probabilidade",
-      image: "/images/projects/professor/professor02.jpg",
+      image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
       colSpan: "col-span-1",
     },
@@ -13,14 +13,14 @@ export default function ProjectsProfessor() {
     {
       title: "Matemática Financeira",
       description: "Video aulas de Matemática Financeira",
-      image: "/images/projects/professor/professor06.jpg",
+      image: "/images/projects/professor/aulaMatematicaFinanceira.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
       colSpan: "col-span-1",
     },
     {
       title: "Projeto Integrador",
       description: "Video aulas Projeto Integrador",
-      image: "/images/projects/professor/professor03.jpg",
+      image: "/images/projects/professor/aulaProjetoIntegrador.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
       colSpan: "col-span-1",
     },
@@ -31,7 +31,7 @@ export default function ProjectsProfessor() {
       className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
       id="projectsProfessor"
     >
-      <div className="container mx-auto max-w-4xl p-4 py-8">
+      <div className="container mx-auto max-w-6xl p-4 py-8">
         <div className="relative p-6 text-center">
           <h2 className="relative z-40 mb-2 text-white">
             <span className="mr-2 font-headline text-3xl font-semibold z-40">
@@ -46,7 +46,7 @@ export default function ProjectsProfessor() {
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>
 
-        <div className="grid grid-cols-1 mt-10 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-2 mt-10 gap-4 md:grid-cols-3">
           {projects.map((project, index) => (
             <div
               className={`group relative cursor-default rounded-lg ${project.colSpan}`}

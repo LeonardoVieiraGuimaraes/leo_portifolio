@@ -6,7 +6,7 @@ export default function Hero() {
       className="rounded-br-[60px] bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
       id="hero"
     >
-      <div className="container mx-auto max-w-4xl flex-col-reverse p-4 py-20 md:flex-row">
+      <div className="container mx-auto max-w-6xl flex-col-reverse p-4 py-20 md:flex-row">
         {/* <div className="basis-1/2"> */}
 
         <h1 className="mb-6 text-center md:text-left">
