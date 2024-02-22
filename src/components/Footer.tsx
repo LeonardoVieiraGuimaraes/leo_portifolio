@@ -1,11 +1,11 @@
 import {
   FaGithub,
   FaDiscord,
-  FaInstagram,
-  FaFacebook,
+  // FaInstagram,
+  // FaFacebook,
   FaLinkedin,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
 const socialLinks = [
   {
     name: "Github",
@@ -17,21 +17,21 @@ const socialLinks = [
     url: "https://discord.gg/zDyXDFC8",
     icon: FaDiscord,
   },
-  {
-    name: "Instagram",
-    url: "https://instagram.com/yourusername",
-    icon: FaInstagram,
-  },
-  {
-    name: "Facebook",
-    url: "https://facebook.com/yourusername",
-    icon: FaFacebook,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/Leonard24081612",
-    icon: FaXTwitter,
-  },
+  // {
+  //   name: "Instagram",
+  //   url: "https://instagram.com/yourusername",
+  //   icon: FaInstagram,
+  // },
+  // {
+  //   name: "Facebook",
+  //   url: "https://facebook.com/yourusername",
+  //   icon: FaFacebook,
+  // },
+  // {
+  //   name: "Twitter",
+  //   url: "https://twitter.com/Leonard24081612",
+  //   icon: FaXTwitter,
+  // },
   {
     name: "Linkedin",
     url: "https://linkedin.com/in/leonardo-vieira-guimaraes",
