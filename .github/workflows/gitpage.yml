@@ -1,10 +1,9 @@
-# .github/workflows/gitpage.yml
-name: GitPage Workflow
-
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy GitPage
 on:
-  #   push:
-  #     branches:
-  #       - main
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,7 +16,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -29,12 +28,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
-          cache: "npm"
+          node-version: 18
+          cache: 'npm'
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -42,10 +41,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           # Upload dist repository
-          path: "./dist"
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2

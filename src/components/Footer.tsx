@@ -12,11 +12,11 @@ const socialLinks = [
     url: "https://github.com/LeonardoVieiraGuimaraes/",
     icon: FaGithub,
   },
-  {
-    name: "Discord",
-    url: "https://discord.gg/zDyXDFC8",
-    icon: FaDiscord,
-  },
+  // {
+  //   name: "Discord",
+  //   url: "https://discord.gg/zDyXDFC8",
+  //   icon: FaDiscord,
+  // },
   // {
   //   name: "Instagram",
   //   url: "https://instagram.com/yourusername",
