@@ -1,6 +1,6 @@
 import {
   FaGithub,
-  FaDiscord,
+  // FaDiscord,
   // FaInstagram,
   // FaFacebook,
   FaLinkedin,
